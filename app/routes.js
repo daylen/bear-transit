@@ -35,15 +35,16 @@ module.exports = function(app) {
 	});
 
 	app.get('/api/v1/stops', function(req, res, next) {
-		var lat = Number(req.query.lat) || null;
-		var lon = Number(req.query.lon) || null;
+		var lat = req.query.lat ? Number(req.query.lat) : null;
+		var lon = req.query.lon ? Number(req.query.lon) : null;
 
 		var stops_arr = _.map(stops, function(value, key) {
-			value.id = key;
+			var stop_obj = _.clone(value);
+			stop_obj.id = key;
 			if (lat && lon) {
-				value.dist = calc_distance(lat, value.lat, lon, value.lon);
+				stop_obj.dist = calc_distance(lat, value.lat, lon, value.lon);
 			}
-			return value;
+			return stop_obj;
 		});
 
 		if (lat && lon) {
@@ -54,6 +55,10 @@ module.exports = function(app) {
 		}
 
 		res.json(stops_arr);
+	});
+
+	app.get('/api/v1/stop', function(req, res, next) {
+
 	});
 
 };
