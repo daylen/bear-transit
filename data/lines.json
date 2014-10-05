@@ -1,459 +1,454 @@
 {
-  "lines": [
-    {
-      "name": "H",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "inc": 30,
-      "schedule": [
-        {
-          "from": "bart",
-          "to": "evans",
-          "fixed": [
-            735,
-            1855
+  "H": {
+    "days": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "inc": 30,
+    "schedule": [
+      {
+        "from": "bart",
+        "to": "evans",
+        "fixed": [
+          735,
+          1855
+        ]
+      },
+      {
+        "from": "evans",
+        "to": "sberry canyon",
+        "intervals": [
+          [
+            740,
+            1810
           ]
-        },
-        {
-          "from": "evans",
-          "to": "sberry canyon",
-          "intervals": [
-            [
-              740,
-              1810
-            ]
-          ],
-          "fixed": [
+        ],
+        "fixed": [
+          1900
+        ]
+      },
+      {
+        "from": "sberry canyon",
+        "to": "bot garden",
+        "intervals": [
+          [
+            745,
+            1815
+          ]
+        ],
+        "fixed": [
+          1902
+        ]
+      },
+      {
+        "from": "bot garden",
+        "to": "hall science",
+        "intervals": [
+          [
+            747,
+            1817
+          ]
+        ],
+        "fixed": [
+          1904
+        ]
+      },
+      {
+        "from": "hall science",
+        "to": "space lab",
+        "intervals": [
+          [
+            749,
+            1819
+          ]
+        ],
+        "fixed": [
+          1906
+        ]
+      },
+      {
+        "from": "space lab",
+        "to": "hall science",
+        "intervals": [
+          [
+            755,
+            1825
+          ]
+        ],
+        "fixed": [
+          1915
+        ]
+      },
+      {
+        "from": "hall science",
+        "to": "bot garden",
+        "intervals": [
+          [
+            757,
+            1827
+          ]
+        ],
+        "fixed": [
+          1917
+        ]
+      },
+      {
+        "from": "bot garden",
+        "to": "sberry canyon",
+        "intervals": [
+          [
+            759,
+            1829
+          ]
+        ],
+        "fixed": [
+          1919
+        ]
+      },
+      {
+        "from": "sberry canyon",
+        "to": "evans",
+        "intervals": [
+          [
+            801,
+            1831
+          ]
+        ],
+        "fixed": [
+          1921
+        ]
+      },
+      {
+        "from": "evans",
+        "to": "bart",
+        "fixed": [
+          1835,
+          1923
+        ]
+      }
+    ]
+  },
+  "Perimeter": {
+    "days": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "inc": 30,
+    "schedule": [
+      {
+        "from": "bart",
+        "to": "oxford uni",
+        "intervals": [
+          [
+            700,
             1900
           ]
-        },
-        {
-          "from": "sberry canyon",
-          "to": "bot garden",
-          "intervals": [
-            [
-              745,
-              1815
-            ]
-          ],
-          "fixed": [
+        ]
+      },
+      {
+        "from": "oxford uni",
+        "to": "tolman",
+        "intervals": [
+          [
+            702,
             1902
           ]
-        },
-        {
-          "from": "bot garden",
-          "to": "hall science",
-          "intervals": [
-            [
-              747,
-              1817
-            ]
-          ],
-          "fixed": [
+        ]
+      },
+      {
+        "from": "tolman",
+        "to": "north gate",
+        "intervals": [
+          [
+            704,
             1904
           ]
-        },
-        {
-          "from": "hall science",
-          "to": "space lab",
-          "intervals": [
-            [
-              749,
-              1819
-            ]
-          ],
-          "fixed": [
+        ]
+      },
+      {
+        "from": "north gate",
+        "to": "cory",
+        "intervals": [
+          [
+            705,
+            1905
+          ]
+        ]
+      },
+      {
+        "from": "cory",
+        "to": "evans",
+        "intervals": [
+          [
+            706,
             1906
           ]
-        },
-        {
-          "from": "space lab",
-          "to": "hall science",
-          "intervals": [
-            [
-              755,
-              1825
-            ]
-          ],
-          "fixed": [
-            1915
+        ]
+      },
+      {
+        "from": "evans",
+        "to": "gayley",
+        "intervals": [
+          [
+            708,
+            1908
           ]
-        },
-        {
-          "from": "hall science",
-          "to": "bot garden",
-          "intervals": [
-            [
-              757,
-              1827
-            ]
-          ],
-          "fixed": [
-            1917
+        ]
+      },
+      {
+        "from": "gayley",
+        "to": "haas",
+        "intervals": [
+          [
+            710,
+            1910
           ]
-        },
-        {
-          "from": "bot garden",
-          "to": "sberry canyon",
-          "intervals": [
-            [
-              759,
-              1829
-            ]
-          ],
-          "fixed": [
-            1919
+        ]
+      },
+      {
+        "from": "haas",
+        "to": "ihouse",
+        "intervals": [
+          [
+            711,
+            1911
           ]
-        },
-        {
-          "from": "sberry canyon",
-          "to": "evans",
-          "intervals": [
-            [
-              801,
-              1831
-            ]
-          ],
-          "fixed": [
+        ]
+      },
+      {
+        "from": "ihouse",
+        "to": "piedmont",
+        "intervals": [
+          [
+            712,
+            1912
+          ]
+        ]
+      },
+      {
+        "from": "piedmont",
+        "to": "college",
+        "intervals": [
+          [
+            714,
+            1914
+          ]
+        ]
+      },
+      {
+        "from": "college",
+        "to": "kroeber",
+        "intervals": [
+          [
+            718,
+            1918
+          ]
+        ]
+      },
+      {
+        "from": "kroeber",
+        "to": "hearst gym",
+        "intervals": [
+          [
+            720,
+            1920
+          ]
+        ]
+      },
+      {
+        "from": "hearst gym",
+        "to": "sproul",
+        "intervals": [
+          [
+            721,
             1921
           ]
-        },
-        {
-          "from": "evans",
-          "to": "bart",
-          "fixed": [
-            1835,
+        ]
+      },
+      {
+        "from": "sproul",
+        "to": "rsf",
+        "intervals": [
+          [
+            723,
             1923
           ]
-        }
-      ]
-    },
-    {
-      "name": "Perimeter",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "inc": 30,
-      "schedule": [
-        {
-          "from": "bart",
-          "to": "oxford uni",
-          "intervals": [
-            [
-              700,
-              1900
-            ]
+        ]
+      },
+      {
+        "from": "rsf",
+        "to": "banway",
+        "intervals": [
+          [
+            725,
+            1925
           ]
-        },
-        {
-          "from": "oxford uni",
-          "to": "tolman",
-          "intervals": [
-            [
-              702,
-              1902
-            ]
+        ]
+      },
+      {
+        "from": "banway",
+        "to": "shattuck",
+        "intervals": [
+          [
+            727,
+            1927
           ]
-        },
-        {
-          "from": "tolman",
-          "to": "north gate",
-          "intervals": [
-            [
-              704,
-              1904
-            ]
+        ]
+      },
+      {
+        "from": "shattuck",
+        "to": "bart",
+        "intervals": [
+          [
+            728,
+            1928
           ]
-        },
-        {
-          "from": "north gate",
-          "to": "cory",
-          "intervals": [
-            [
-              705,
-              1905
-            ]
+        ]
+      }
+    ]
+  },
+  "Central Campus": {
+    "days": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "inc": 20,
+    "schedule": [
+      {
+        "from": "bart",
+        "to": "oxford uni",
+        "intervals": [
+          [
+            645,
+            1045
+          ],
+          [
+            1615,
+            1855
           ]
-        },
-        {
-          "from": "cory",
-          "to": "evans",
-          "intervals": [
-            [
-              706,
-              1906
-            ]
+        ]
+      },
+      {
+        "from": "oxford uni",
+        "to": "tolman",
+        "intervals": [
+          [
+            647,
+            1047
+          ],
+          [
+            1617,
+            1857
           ]
-        },
-        {
-          "from": "evans",
-          "to": "gayley",
-          "intervals": [
-            [
-              708,
-              1908
-            ]
+        ]
+      },
+      {
+        "from": "tolman",
+        "to": "north gate",
+        "intervals": [
+          [
+            649,
+            1049
+          ],
+          [
+            1619,
+            1859
           ]
-        },
-        {
-          "from": "gayley",
-          "to": "haas",
-          "intervals": [
-            [
-              710,
-              1910
-            ]
+        ]
+      },
+      {
+        "from": "north gate",
+        "to": "cory",
+        "intervals": [
+          [
+            651,
+            1051
+          ],
+          [
+            1621,
+            1901
           ]
-        },
-        {
-          "from": "haas",
-          "to": "ihouse",
-          "intervals": [
-            [
-              711,
-              1911
-            ]
+        ]
+      },
+      {
+        "from": "cory",
+        "to": "evans",
+        "intervals": [
+          [
+            652,
+            1052
+          ],
+          [
+            1622,
+            1902
           ]
-        },
-        {
-          "from": "ihouse",
-          "to": "piedmont",
-          "intervals": [
-            [
-              712,
-              1912
-            ]
+        ]
+      },
+      {
+        "from": "evans",
+        "to": "moffitt",
+        "intervals": [
+          [
+            655,
+            1055
+          ],
+          [
+            1625,
+            1905
           ]
-        },
-        {
-          "from": "piedmont",
-          "to": "college",
-          "intervals": [
-            [
-              714,
-              1914
-            ]
+        ]
+      },
+      {
+        "from": "moffitt",
+        "to": "west circle",
+        "intervals": [
+          [
+            658,
+            1058
+          ],
+          [
+            1628,
+            1908
           ]
-        },
-        {
-          "from": "college",
-          "to": "kroeber",
-          "intervals": [
-            [
-              718,
-              1918
-            ]
+        ]
+      },
+      {
+        "from": "west circle",
+        "to": "li ka shing",
+        "intervals": [
+          [
+            700,
+            1100
+          ],
+          [
+            1630,
+            1910
           ]
-        },
-        {
-          "from": "kroeber",
-          "to": "hearst gym",
-          "intervals": [
-            [
-              720,
-              1920
-            ]
+        ]
+      },
+      {
+        "from": "li ka shing",
+        "to": "bart",
+        "intervals": [
+          [
+            702,
+            1102
+          ],
+          [
+            1632,
+            1912
           ]
-        },
-        {
-          "from": "hearst gym",
-          "to": "sproul",
-          "intervals": [
-            [
-              721,
-              1921
-            ]
-          ]
-        },
-        {
-          "from": "sproul",
-          "to": "rsf",
-          "intervals": [
-            [
-              723,
-              1923
-            ]
-          ]
-        },
-        {
-          "from": "rsf",
-          "to": "banway",
-          "intervals": [
-            [
-              725,
-              1925
-            ]
-          ]
-        },
-        {
-          "from": "banway",
-          "to": "shattuck",
-          "intervals": [
-            [
-              727,
-              1927
-            ]
-          ]
-        },
-        {
-          "from": "shattuck",
-          "to": "bart",
-          "intervals": [
-            [
-              728,
-              1928
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Central Campus",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "inc": 20,
-      "schedule": [
-        {
-          "from": "bart",
-          "to": "oxford uni",
-          "intervals": [
-            [
-              645,
-              1045
-            ],
-            [
-              1615,
-              1855
-            ]
-          ]
-        },
-        {
-          "from": "oxford uni",
-          "to": "tolman",
-          "intervals": [
-            [
-              647,
-              1047
-            ],
-            [
-              1617,
-              1857
-            ]
-          ]
-        },
-        {
-          "from": "tolman",
-          "to": "north gate",
-          "intervals": [
-            [
-              649,
-              1049
-            ],
-            [
-              1619,
-              1859
-            ]
-          ]
-        },
-        {
-          "from": "north gate",
-          "to": "cory",
-          "intervals": [
-            [
-              651,
-              1051
-            ],
-            [
-              1621,
-              1901
-            ]
-          ]
-        },
-        {
-          "from": "cory",
-          "to": "evans",
-          "intervals": [
-            [
-              652,
-              1052
-            ],
-            [
-              1622,
-              1902
-            ]
-          ]
-        },
-        {
-          "from": "evans",
-          "to": "moffitt",
-          "intervals": [
-            [
-              655,
-              1055
-            ],
-            [
-              1625,
-              1905
-            ]
-          ]
-        },
-        {
-          "from": "moffitt",
-          "to": "west circle",
-          "intervals": [
-            [
-              658,
-              1058
-            ],
-            [
-              1628,
-              1908
-            ]
-          ]
-        },
-        {
-          "from": "west circle",
-          "to": "li ka shing",
-          "intervals": [
-            [
-              700,
-              1100
-            ],
-            [
-              1630,
-              1910
-            ]
-          ]
-        },
-        {
-          "from": "li ka shing",
-          "to": "bart",
-          "intervals": [
-            [
-              702,
-              1102
-            ],
-            [
-              1632,
-              1912
-            ]
-          ]
-        }
-      ]
-    }
-  ]
+        ]
+      }
+    ]
+  }
 }

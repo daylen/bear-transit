@@ -1,8 +1,8 @@
 var _ = require('underscore');
+var moment = require('moment');
 
-var lines = require('../data/lines').lines;
+var lines = require('../data/lines');
 var stops = require('../data/stops');
-var time_util = require('./time');
 
 if (typeof Number.prototype.toRadians == 'undefined') {
     Number.prototype.toRadians = function() { return this * Math.PI / 180; };
@@ -25,6 +25,38 @@ function calc_distance (lat1, lat2, lon1, lon2) {
 	return d;
 }
 
+function increment_time (time, inc) {
+	var hours = Math.floor(time / 100);
+	var minutes = time % 100 + inc;
+	if (minutes >= 60) {
+		hours += Math.floor(minutes / 60);
+		minutes %= 60;
+	}
+	return hours * 100 + minutes;
+}
+
+function calc_upcoming_times (m_date, inc, segment) {
+	var all_times = segment.fixed || [];
+
+	if (segment.intervals) {
+		_.each(segment.intervals, function(interval) {
+			var curr = interval[0];
+			do {
+				all_times.push(curr);
+				curr = increment_time(curr, inc);
+			} while (curr <= interval[1]);
+		});
+	}
+
+	var curr_time_formatted = m_date.hour() * 100 + m_date.minute();
+
+	var future_times = _.filter(all_times, function(time) {
+		return time >= curr_time_formatted;
+	});
+
+	return future_times;
+}
+
 module.exports = function(app) {
 	
 	app.get('/', function(req, res) {
@@ -33,6 +65,17 @@ module.exports = function(app) {
 
 	app.get('/api/v1/lines', function(req, res, next) {
 		res.json(lines);
+	});
+
+	/*
+	Required: id
+	*/
+	app.get('/api/v1/line', function(req, res, next) {
+		if (_.has(lines, req.query.id)) {
+			res.json(lines[req.query.id]);
+		} else {
+			next(new Error(404));
+		}
 	});
 
 	/*
@@ -62,6 +105,7 @@ module.exports = function(app) {
 	});
 
 	/*
+	Required: id
 	Optional: time
 	*/
 	app.get('/api/v1/stop', function(req, res, next) {
@@ -69,9 +113,30 @@ module.exports = function(app) {
 			var stop = _.clone(stops[req.query.id]);
 
 			if (req.query.time) {
-				var time = Number(req.query.time);
-				var day_of_week = time_util.day_of_week(time);
-				
+				var next_bus = [];
+
+				var m_date = moment(Number(req.query.time));
+				var day_of_week = m_date.isoWeekday();
+
+				_.each(lines, function(line) {
+					// Weekend check
+					if (_.contains(line.days, day_of_week)) {
+						_.each(line.schedule, function(segment) {
+							if (segment.from == req.query.id) {
+								var times = calc_upcoming_times(m_date, line.inc, segment);
+								if (times.length > 0) {
+									next_bus.push({
+										"line": line.name,
+										"line_note": "To " + stops[segment.to].name,
+										"times": times
+									});
+								}
+							}
+						});
+					}
+				});
+
+				stop.next = next_bus;
 			}
 
 			res.json(stop);
