@@ -3,11 +3,11 @@
     {
       "name": "H",
       "days": [
+        1,
         2,
         3,
         4,
-        5,
-        6
+        5
       ],
       "inc": 30,
       "schedule": [
@@ -136,11 +136,11 @@
     {
       "name": "Perimeter",
       "days": [
+        1,
         2,
         3,
         4,
-        5,
-        6
+        5
       ],
       "inc": 30,
       "schedule": [
@@ -319,11 +319,11 @@
     {
       "name": "Central Campus",
       "days": [
+        1,
         2,
         3,
         4,
-        5,
-        6
+        5
       ],
       "inc": 20,
       "schedule": [

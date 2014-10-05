@@ -1,7 +1,8 @@
 var _ = require('underscore');
 
-var lines = require('../data/lines');
+var lines = require('../data/lines').lines;
 var stops = require('../data/stops');
+var time_util = require('./time');
 
 if (typeof Number.prototype.toRadians == 'undefined') {
     Number.prototype.toRadians = function() { return this * Math.PI / 180; };
@@ -31,9 +32,12 @@ module.exports = function(app) {
 	});
 
 	app.get('/api/v1/lines', function(req, res, next) {
-		res.json(lines.lines);
+		res.json(lines);
 	});
 
+	/*
+	Optional: lat, lon
+	*/
 	app.get('/api/v1/stops', function(req, res, next) {
 		var lat = req.query.lat ? Number(req.query.lat) : null;
 		var lon = req.query.lon ? Number(req.query.lon) : null;
@@ -57,8 +61,23 @@ module.exports = function(app) {
 		res.json(stops_arr);
 	});
 
+	/*
+	Optional: time
+	*/
 	app.get('/api/v1/stop', function(req, res, next) {
+		if (_.has(stops, req.query.id)) {
+			var stop = _.clone(stops[req.query.id]);
 
+			if (req.query.time) {
+				var time = Number(req.query.time);
+				var day_of_week = time_util.day_of_week(time);
+				
+			}
+
+			res.json(stop);
+		} else {
+			next(new Error(404));
+		}
 	});
 
 };
