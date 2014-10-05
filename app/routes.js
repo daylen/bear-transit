@@ -9,7 +9,7 @@ if (typeof Number.prototype.toRadians == 'undefined') {
 }
 
 function calc_distance (lat1, lat2, lon1, lon2) {
-	var R = 6371; // km
+	var R = 3959; // miles
 	var φ1 = lat1.toRadians();
 	var φ2 = lat2.toRadians();
 	var Δφ = (lat2-lat1).toRadians();
