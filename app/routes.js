@@ -63,6 +63,10 @@ module.exports = function(app) {
 		res.render('index');
 	});
 
+	app.get('/api-terms', function(req, res) {
+		res.render('api-terms');
+	});
+
 	app.get('/api/v1/lines', function(req, res, next) {
 		res.json(lines);
 	});
@@ -70,9 +74,9 @@ module.exports = function(app) {
 	/*
 	Required: id
 	*/
-	app.get('/api/v1/line', function(req, res, next) {
-		if (_.has(lines, req.query.id)) {
-			res.json(lines[req.query.id]);
+	app.get('/api/v1/line/:id', function(req, res, next) {
+		if (_.has(lines, req.params.id)) {
+			res.json(lines[req.params.id]);
 		} else {
 			next(new Error(404));
 		}
@@ -108,9 +112,9 @@ module.exports = function(app) {
 	Required: id
 	Optional: time
 	*/
-	app.get('/api/v1/stop', function(req, res, next) {
-		if (_.has(stops, req.query.id)) {
-			var stop = _.clone(stops[req.query.id]);
+	app.get('/api/v1/stop/:id', function(req, res, next) {
+		if (_.has(stops, req.params.id)) {
+			var stop = _.clone(stops[req.params.id]);
 
 			if (req.query.time) {
 				var next_bus = [];
@@ -122,7 +126,7 @@ module.exports = function(app) {
 					// Weekend check
 					if (_.contains(line.days, day_of_week)) {
 						_.each(line.schedule, function(segment) {
-							if (segment.from == req.query.id) {
+							if (segment.from == req.params.id) {
 								var times = calc_upcoming_times(m_date, line.inc, segment);
 								if (times.length > 0) {
 									next_bus.push({

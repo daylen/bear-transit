@@ -1,5 +1,6 @@
 {
   "H": {
+    "name": "H",
     "days": [
       1,
       2,
@@ -132,6 +133,7 @@
     ]
   },
   "Perimeter": {
+    "name": "Perimeter",
     "days": [
       1,
       2,
@@ -314,6 +316,7 @@
     ]
   },
   "Central Campus": {
+    "name": "Central Campus",
     "days": [
       1,
       2,

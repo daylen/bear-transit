@@ -1,6 +1,7 @@
 var cluster = require('cluster');
 var numCPUs = require('os').cpus().length;
 
+var path = require('path');
 var express = require('express');
 var app = express();
 
@@ -35,6 +36,8 @@ if (cluster.isMaster) {
 	}
 } else {
 	app.set('view engine', 'jade');
+
+	app.use(express.static(path.join(__dirname, 'public')));
 	app.use(error_handler);
 
 	require('./app/routes')(app);

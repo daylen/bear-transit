@@ -1,0 +1,26 @@
+extends layout
+
+block head
+	title="API Terms and Conditions - Bear Transit"
+	link(rel="stylesheet" href="/css/style.css")
+
+block body
+	div(class="container")
+		div(class="row")
+			div(class="col-xs-12")
+				h1 API Terms and Conditions
+				p
+					a(href="/")
+						span(class="glyphicon glyphicon-home")
+						span  Back to Home
+				hr
+		div(class="row")
+			div(class="col-xs-12")
+				p The Bear Transit API is <a href="http://docs.beartransit.apiary.io/" target="_blank">free to use</a>, but there are few simple rules you need to abide by.
+				h2 Attribution
+				p You must link back to this website if you are using the Bear Transit API. Here is an example of proper attribution:
+				blockquote
+					p Powered by the <a href="/">Bear Transit API</a>.
+				p The text "Bear Transit API" is linked.
+				h2 Rate Limiting
+				p Do not make excessive requests to the Bear Transit API.

@@ -2,6 +2,19 @@ extends layout
 
 block head
 	title="Bear Transit"
+	link(rel="stylesheet" href="/css/style.css")
 
 block body
-	h1 Bear Transit
+	div(class="container")
+		div(class="row")
+			div(class="col-xs-12")
+				h1 Bear Transit
+		div(class="row")
+			div(class="col-xs-12")
+				hr
+				div(class="well")
+					h4 Introducing the Bear Transit API.
+					p Say goodbye to PDF files. For the first time, developers can access Bear Transit information using a REST-based API.
+					a(href="http://docs.beartransit.apiary.io" target="_blank" class="btn btn-primary btn-lg")
+						span Read the API docs 
+						span(class="glyphicon glyphicon-chevron-right")
