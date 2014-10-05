@@ -60,7 +60,7 @@ function calc_upcoming_times (m_date, inc, segment) {
 module.exports = function(app) {
 	
 	app.get('/', function(req, res) {
-		res.send('Bear Transit API');
+		res.render('index');
 	});
 
 	app.get('/api/v1/lines', function(req, res, next) {

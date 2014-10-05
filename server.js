@@ -34,9 +34,10 @@ if (cluster.isMaster) {
 		cluster.fork();
 	}
 } else {
-	require('./app/routes')(app);
-
+	app.set('view engine', 'jade');
 	app.use(error_handler);
+
+	require('./app/routes')(app);
 
 	var server = app.listen(Number(process.env.PORT || 3000), function() {
 		console.log('Server started');
