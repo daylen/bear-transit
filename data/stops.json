@@ -1,0 +1,122 @@
+{
+  "banway": {
+    "name": "Banway Building",
+    "lat": 37.867764,
+    "lon": -122.267036
+  },
+  "bart": {
+    "name": "Downtown Berkeley BART Station",
+    "lat": 37.870178,
+    "lon": -122.267876
+  },
+  "bot garden": {
+    "name": "UC Botanical Garden",
+    "lat": 37.874989,
+    "lon": -122.238670
+  },
+  "college": {
+    "name": "College Avenue",
+    "lat": 37.867081,
+    "lon": -122.253952
+  },
+  "cory": {
+    "name": "Cory Hall",
+    "lat": 37.875210,
+    "lon": -122.257919
+  },
+  "evans": {
+    "name": "Evans Hall",
+    "lat": 37.873344,
+    "lon": -122.257515
+  },
+  "gayley": {
+    "name": "Gayley",
+    "lat": 37.872532,
+    "lon": -122.254097
+  },
+  "haas": {
+    "name": "Haas School of Business",
+    "lat": 37.871365,
+    "lon": -122.252884
+  },
+  "hall science": {
+    "name": "Lawrence Hall of Science",
+    "lat": 37.879715,
+    "lon": -122.245689
+  },
+  "hearst gym": {
+    "name": "Hearst Memorial Gym",
+    "lat": 37.869102,
+    "lon": -122.257225
+  },
+  "ihouse": {
+    "name": "International House",
+    "lat": 37.869740,
+    "lon": -122.252495
+  },
+  "kroeber": {
+    "name": "Kroeber Hall",
+    "lat": 37.869408,
+    "lon": -122.254837
+  },
+  "li ka shing": {
+    "name": "Li Ka Shing Center",
+    "lat": 37.871754,
+    "lon": -122.265099
+  },
+  "moffitt": {
+    "name": "Moffitt Library",
+    "lat": 37.872879,
+    "lon": -122.261360
+  },
+  "north gate": {
+    "name": "North Gate",
+    "lat": 37.874821,
+    "lon": -122.260429
+  },
+  "oxford uni": {
+    "name": "Oxford and University",
+    "lat": 37.872620,
+    "lon": -122.265793
+  },
+  "piedmont": {
+    "name": "Piedmont Avenue",
+    "lat": 37.867985,
+    "lon": -122.252213
+  },
+  "rsf": {
+    "name": "Recreational Sports Facility",
+    "lat": 37.868210,
+    "lon": -122.263603
+  },
+  "sberry canyon": {
+    "name": "Strawberry Canyon",
+    "lat": 37.872406,
+    "lon": -122.246452
+  },
+  "shattuck": {
+    "name": "Kittredge",
+    "lat": 37.868275,
+    "lon": -122.267662
+  },
+  "space lab": {
+    "name": "Space Sciences Lab",
+    "lat": 37.880680,
+    "lon": -122.243713
+  },
+  "sproul": {
+    "name": "Sproul Hall",
+    "lat": 37.868610,
+    "lon": -122.261246
+  },
+  "tolman": {
+    "name": "Tolman Hall",
+    "lat": 37.874378,
+    "lon": -122.263603
+  },
+  "west circle": {
+    "name": "West Circle",
+    "lat": 37.872341,
+    "lon": -122.263535
+  }
+}
