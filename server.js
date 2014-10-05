@@ -1,7 +1,8 @@
+var cluster = require('cluster');
+var numCPUs = require('os').cpus().length;
+
 var express = require('express');
 var app = express();
-
-require('./app/routes')(app);
 
 function error_handler(err, req, res, next) {
 	if (err.message == '400') {
@@ -28,8 +29,22 @@ function error_handler(err, req, res, next) {
 	}
 }
 
-app.use(error_handler);
+if (cluster.isMaster) {
+	for (var i = 0; i < numCPUs; i++) {
+		cluster.fork();
+	}
+} else {
+	require('./app/routes')(app);
 
-var server = app.listen(Number(process.env.PORT || 3000), function() {
-	console.log('Server started');
+	app.use(error_handler);
+
+	var server = app.listen(Number(process.env.PORT || 3000), function() {
+		console.log('Server started');
+	});
+}
+
+cluster.on('exit', function(worker, code, signal) {
+	console.log('worker %d died (%s). restarting...',
+		worker.process.pid, signal || code);
+	cluster.fork();
 });
