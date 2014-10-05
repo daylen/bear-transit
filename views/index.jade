@@ -8,13 +8,48 @@ block body
 	div(class="container")
 		div(class="row")
 			div(class="col-xs-12")
-				h1 Bear Transit
+				h1 Bear Transit 
+					small Current Departures
+				hr
+		div(class="row")
+			div(class="col-xs-12 col-sm-6")
+				p(class="large")
+					span Nearest stop: 
+					b(id="stop-name" class="text-primary") Finding your location...
+				p
+					span(id="stop-dist") --
+					span  miles away
+				div(class="well" id="no-next-bus" style="display: none;")
+					h4 No active lines
+				div(id="next-bus")
+					div(class="next-cell")
+						div(class="next-left")
+							div(class="next-line") Perimeter Blah
+							div(class="next-line-note") Subtext
+						div(class="next-right")
+							div(class="next-first") 42 min hr
+							div(class="next-second") 52 min
+					div(class="next-cell")
+						div(class="next-left")
+							div(class="next-line") Perimeter
+							div(class="next-line-note") Subtext
+						div(class="next-right")
+							div(class="next-first") 42 min
+							div(class="next-second") 52 min
+
+			div(class="col-xs-12 col-sm-6")
+				div(id="map")
+
 		div(class="row")
 			div(class="col-xs-12")
 				hr
 				div(class="well")
 					h4 Introducing the Bear Transit API.
 					p Say goodbye to PDF files. For the first time, developers can access Bear Transit information using a REST-based API.
-					a(href="http://docs.beartransit.apiary.io" target="_blank" class="btn btn-primary btn-lg")
+					a(href="http://docs.beartransit.apiary.io" target="_blank" class="btn btn-warning btn-lg")
 						span Read the API docs 
 						span(class="glyphicon glyphicon-chevron-right")
+
+block js
+	script(src="//maps.googleapis.com/maps/api/js?key=AIzaSyBuROq7LKwyksdMFoBZ0Rbh_If65opqOBM")
+	script(src="/js/home.js")
