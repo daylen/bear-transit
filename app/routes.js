@@ -120,6 +120,7 @@ module.exports = function(app) {
 				var next_bus = [];
 
 				var m_date = moment(Number(req.query.time));
+				m_date.zone("-07:00");
 				var day_of_week = m_date.isoWeekday();
 
 				_.each(lines, function(line) {
