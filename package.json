@@ -1,0 +1,7 @@
+{
+  "name": "bear-transit",
+  "dependencies": {
+    "express": "^4.9.5",
+    "underscore": "^1.7.0"
+  }
+}
