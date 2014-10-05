@@ -6,5 +6,8 @@
     "jade": "^1.7.0",
     "moment": "^2.8.3",
     "underscore": "^1.7.0"
+  },
+  "scripts": {
+    "postinstall": "./node_modules/bower/bin/bower install"
   }
 }
