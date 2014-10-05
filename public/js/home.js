@@ -1,19 +1,47 @@
+function time_diff (time) {
+	var curr = new Date();
+	var to = new Date();
+	var to_h = Math.floor(time / 100);
+	var to_m = time % 100;
+	to.setHours(to_h, to_m);
+
+	var min = Math.abs(to - curr)/(1000 * 60);
+	if (min < 60) {
+		return '' + min + ' min';
+	} else {
+		return Math.floor(min / 60) + 'h ' + (min % 60) + 'm';
+	}
+}
+
+function add_cell (info) {
+	var html = '<div class="next-cell"><div class="next-left"><div class="next-line">';
+	html += info.line;
+	html += '</div><div class="next-line-note">';
+	html += info.line_note;
+	html += '</div></div><div class="next-right"><div class="next-first">';
+	html += time_diff(info.times[0]);
+	html += '</div><div class="next-second">';
+	html += time_diff(info.times[1]);
+	html += '</div></div></div>';
+	$('#next-bus').append(html);
+}
+
 function populate_next_bus (stop_id) {
 	// Now look up the stop
 	var time = (new Date()).getTime();
-	// TODO REMOVE
-	time += (1000 * 60 * 60 * 24);
-	// TODO ^ REMOVE
+	if (window.location.hash === '#demo') {
+		time += (1000 * 60 * 60 * 24);
+	}
 	$.get('/api/v1/stop/' + stop_id, {'time': time}, function(data) {
 		var next = data.next;
 
 		console.log(next);
 
-		if (next.length == 0) {
+		if (next.length === 0) {
 			$('#no-next-bus').fadeIn();
 		} else {
 			for (var i = 0; i < next.length; i++) {
-
+				add_cell(next[i]);
 			}
 		}
 	});
