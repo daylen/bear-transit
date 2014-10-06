@@ -1,15 +1,14 @@
 extends layout
 
 block head
-	title="Bear Transit"
+	title="Bear Transit Departures"
 	link(rel="stylesheet" href="/css/style.css")
 
 block body
 	div(class="container")
 		div(class="row")
 			div(class="col-xs-12")
-				h1 Bear Transit 
-					small Current Departures
+				h1 Bear Transit Departures
 				hr
 		div(class="row")
 			div(class="col-xs-12 col-sm-6")
@@ -21,6 +20,7 @@ block body
 					span  miles away
 				div(class="well" id="no-next-bus" style="display: none;")
 					h4 No active lines
+					p Bear Transit Departures currently only shows daytime routes. Visit <a href="http://nightsafety.berkeley.edu/nightsafety/nightshuttles">the Night Safety</a> website for information about the Night Safety Shuttle.
 				div(id="next-bus")
 
 			div(class="col-xs-12 col-sm-6")
