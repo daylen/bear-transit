@@ -1,4 +1,10 @@
+var stop_id = null;
+
 function time_diff (time) {
+	if (!time) {
+		return "";
+	}
+
 	var curr = new Date();
 	var to = new Date();
 	var to_h = Math.floor(time / 100);
@@ -26,7 +32,8 @@ function add_cell (info) {
 	$('#next-bus').append(html);
 }
 
-function populate_next_bus (stop_id) {
+function populate_next_bus () {
+	if (!stop_id) return;
 	// Now look up the stop
 	var time = (new Date()).getTime();
 	if (window.location.hash === '#demo') {
@@ -35,17 +42,19 @@ function populate_next_bus (stop_id) {
 	$.get('/api/v1/stop/' + stop_id, {'time': time}, function(data) {
 		var next = data.next;
 
-		console.log(next);
-
+		$('#next-bus').html('');
 		if (next.length === 0) {
 			$('#no-next-bus').fadeIn();
 		} else {
+			$('#no-next-bus').fadeOut();
 			for (var i = 0; i < next.length; i++) {
 				add_cell(next[i]);
 			}
 		}
 	});
 }
+
+setInterval(populate_next_bus, 60000);
 
 function location_success (position) {
 	var lat = position.coords.latitude;
@@ -86,14 +95,23 @@ function location_success (position) {
 			animation: google.maps.Animation.BOUNCE
 		});
 
-		populate_next_bus(stop.id);
+		stop_id = stop.id;
+		populate_next_bus();
 	});
 }
 
 function location_error (err) {
-	alert('Bear Transit could not determine your location.');
+	$('#stop-name').text("Error");
+	if (err.code == 1) {
+		alert('Could not determine your location because you did not give permission.');
+	} else {
+		alert('Could not determine your location.');
+	}
 }
 
 $(document).ready(function() {
-	navigator.geolocation.getCurrentPosition(location_success, location_error);
+	navigator.geolocation.getCurrentPosition(location_success, location_error, {
+		enableHighAccuracy: true,
+		timeout: 10000
+	});
 });
