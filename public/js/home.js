@@ -112,7 +112,7 @@ function populateDropdown(position) {
 				}
 			}
 		});
-
+		$('.selectize-input input').prop('disabled', true);
 
 		if (data[0].dist) {
 			$('#stop-select')[0].selectize.addItem(data[0].id);
