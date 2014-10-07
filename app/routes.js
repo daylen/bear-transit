@@ -54,7 +54,7 @@ function calc_upcoming_times (m_date, inc, segment) {
 		return time >= curr_time_formatted;
 	});
 
-	return future_times;
+	return _.sortBy(future_times, function(i) { return i; });
 }
 
 module.exports = function(app) {
@@ -132,7 +132,7 @@ module.exports = function(app) {
 								if (times.length > 0) {
 									next_bus.push({
 										"line": line.name,
-										"line_note": "To " + stops[segment.to].name,
+										"line_note": stops[segment.to].name,
 										"times": times
 									});
 								}
