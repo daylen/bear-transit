@@ -2,22 +2,31 @@ extends layout
 
 block head
 	title="Bear Transit Departures"
+	link(rel="stylesheet" href="/bower_components/selectize/dist/css/selectize.default.css")
 	link(rel="stylesheet" href="/css/style.css")
+	link(rel="stylesheet" href="/css/spin.css")
 
 block body
 	div(class="container")
 		div(class="row")
-			div(class="col-xs-12")
-				h1 Bear Transit Departures
+			div(class="col-xs-12" class="text-center")
+				img(src="apple-touch-icon.png" id="logo")
+				h1(id="logo-text") Bear Transit Departures
 				hr
-		div(class="row")
+		div(class="row" id="loading")
+			div(class="col-xs-12")
+				div(class="well")
+					div(class="spinner")
+						div(class="double-bounce1")
+						div(class="double-bounce2")
+					h3(class="text-center") Finding your location...
+		div(class="row" id="main")
+			div(class="col-xs-12" id="error")
+				div(class="alert alert-warning")
+					span Bear Transit couldn't find your location. Select a bus stop below.
 			div(class="col-xs-12 col-sm-6")
-				p(class="large")
-					span Nearest stop: 
-					b(id="stop-name" class="text-primary") Finding your location...
-				p
-					span(id="stop-dist") --
-					span  miles away
+				div
+					select(id="stop-select")
 				div(class="well" id="no-next-bus" style="display: none;")
 					h4 No active lines
 					p Bear Transit Departures currently only shows daytime routes. Visit <a href="http://nightsafety.berkeley.edu/nightsafety/nightshuttles">the Night Safety</a> website for information about the Night Safety Shuttle.
@@ -37,5 +46,6 @@ block body
 						span(class="glyphicon glyphicon-chevron-right")
 
 block js
+	script(src="/bower_components/selectize/dist/js/standalone/selectize.min.js")
 	script(src="//maps.googleapis.com/maps/api/js?key=AIzaSyBuROq7LKwyksdMFoBZ0Rbh_If65opqOBM")
 	script(src="/js/home.js")

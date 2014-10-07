@@ -1,9 +1,23 @@
+#logo {
+	border-radius: 24px;
+	margin-top: 20px;
+	width: 90px;
+}
+
+#main, #error {
+	display: none;
+}
 .large {
 	font-size: 24px;
 }
-.medium {
-	font-size: 16px;
+
+.selectize-dropdown,
+.selectize-input,
+.selectize-input input {
+	font-size: 20px;
+	line-height: 25px;
 }
+
 #map {
 	height: 400px;
 }
@@ -41,6 +55,9 @@
 }
 
 @media screen and (max-width: 768px) {
+	#logo-text {
+		display: none;
+	}
 	#map {
 		height: 200px;
 	}
