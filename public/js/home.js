@@ -163,6 +163,14 @@ function loadMap(stop) {
 	});
 }
 
+$('#cancel-location').click(function() {
+	loadDepartureBrowser(true, null);
+});
+
+setTimeout(function() {
+	$('#cancel-location').fadeIn();
+}, 5000);
+
 $(document).ready(function() {
 	navigator.geolocation.getCurrentPosition(locationSuccess, locationError, {
 		enableHighAccuracy: true,

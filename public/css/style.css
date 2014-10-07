@@ -4,7 +4,7 @@
 	width: 90px;
 }
 
-#main, #error {
+#main, #error, #cancel-location {
 	display: none;
 }
 .large {
