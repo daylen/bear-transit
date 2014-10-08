@@ -172,8 +172,12 @@ setTimeout(function() {
 }, 5000);
 
 $(document).ready(function() {
-	navigator.geolocation.getCurrentPosition(locationSuccess, locationError, {
-		enableHighAccuracy: true,
-		timeout: 10000
-	});
+	if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(locationSuccess, locationError, {
+			enableHighAccuracy: true,
+			timeout: 10000
+		});
+	} else {
+		loadDepartureBrowser(true, null);
+	}
 });
