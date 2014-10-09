@@ -100,8 +100,7 @@ module.exports = function(app) {
 
 		if (lat && lon) {
 			stops_arr.sort(function(a, b) {
-				if (a.dist < b.dist) return -1;
-				else return 1;
+				return a.dist - b.dist;
 			});
 		}
 
