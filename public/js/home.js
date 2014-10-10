@@ -20,7 +20,7 @@ function getTimeDifference(time) {
 	if (min < 60) {
 		return '' + min + ' min';
 	} else {
-		return Math.floor(min / 60) + 'h ' + (min % 60) + 'm';
+		return Math.floor(min / 60) + 'h ' + Math.round(min % 60) + 'm';
 	}
 }
 
