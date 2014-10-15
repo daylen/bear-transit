@@ -37,7 +37,7 @@ function increment_time (time, inc) {
 }
 
 function calc_upcoming_times (m_date, inc, segment) {
-	var all_times = segment.fixed || [];
+	var all_times = _.clone(segment.fixed) || [];
 
 	if (segment.intervals) {
 		_.each(segment.intervals, function(interval) {
