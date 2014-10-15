@@ -71,7 +71,10 @@ module.exports = function(app) {
 	app.get('/api/v1/live', function(req, res, next) {
 		request.post({url: 'http://bearwalk.berkeley.edu/map/student'}, function(err, httpRes, body) {
 			if (err) next(err);
-			res.json(JSON.parse(body));
+			var data = JSON.parse(body);
+			data = _.filter(data, function(x) { return x.x && x.y; });
+			data = _.map(data, function(x) { return _.pick(x, 'van_id', 'x', 'y'); });
+			res.json(data);
 		});
 	});
 
