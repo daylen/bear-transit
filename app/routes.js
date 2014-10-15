@@ -1,5 +1,6 @@
 var _ = require('underscore');
 var moment = require('moment');
+var request = require('request');
 
 var lines = require('../data/lines');
 var stops = require('../data/stops');
@@ -65,6 +66,13 @@ module.exports = function(app) {
 
 	app.get('/api-terms', function(req, res) {
 		res.render('api-terms');
+	});
+
+	app.get('/api/v1/live', function(req, res, next) {
+		request.post({url: 'http://bearwalk.berkeley.edu/map/student'}, function(err, httpRes, body) {
+			if (err) next(err);
+			res.json(JSON.parse(body));
+		});
 	});
 
 	app.get('/api/v1/lines', function(req, res, next) {
