@@ -49,6 +49,7 @@ function refreshNextBusCells() {
 
 		$('#next-bus').html('');
 		if (next.length === 0) {
+			$('#no-next-bus-msg').text(data.message);
 			$('#no-next-bus').fadeIn();
 		} else {
 			$('#no-next-bus').fadeOut();

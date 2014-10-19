@@ -152,6 +152,14 @@ module.exports = function(app) {
 				});
 
 				stop.next = next_bus;
+
+				if (stop.next.length === 0) {
+					if (day_of_week === 6 || day_of_week === 7) {
+						stop.message = "Bear Transit day shuttles do not run on weekends.";
+					} else {
+						stop.message = "Night shuttle support is coming soon.";
+					}
+				}
 			}
 
 			res.json(stop);
