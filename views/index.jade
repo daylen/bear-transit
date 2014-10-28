@@ -26,6 +26,12 @@ block body
 				div(class="alert alert-warning")
 					span Bear Transit couldn't find your location. Select a bus stop below.
 			div(class="col-xs-12 col-sm-6")
+				a(href="https://itunes.apple.com/us/app/bear-transit-nearby-bus-departures/id931324970?mt=8" class="highlight")
+					div(class="icon")
+						span(class="glyphicon glyphicon-download" style="color: #444")
+					div(class="text")
+						h4 Download the Bear Transit iPhone app
+						p Get departure times right on your phone. Never miss class again.
 				div
 					select(id="stop-select")
 				div(class="well" id="no-next-bus" style="display: none;")
@@ -35,16 +41,7 @@ block body
 
 			div(class="col-xs-12 col-sm-6")
 				div(id="map")
-
-		div(class="row")
-			div(class="col-xs-12")
-				hr
-				div(class="well")
-					h4 Introducing the Bear Transit API.
-					p Say goodbye to PDF files. For the first time, developers can access Bear Transit information using a REST-based API.
-					a(href="http://docs.beartransit.apiary.io" target="_blank" class="btn btn-warning btn-lg")
-						span Read the API docs 
-						span(class="glyphicon glyphicon-chevron-right")
+		
 
 block js
 	script(src="/bower_components/selectize/dist/js/standalone/selectize.min.js")

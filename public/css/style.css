@@ -54,6 +54,49 @@
 	font-size: 16px;
 }
 
+/* highlight */
+
+a.highlight {
+	display: table;
+	background-color: #eee;
+	background-image: linear-gradient(#f8e4cb, #f0c68f);
+	border: 1px solid #ccc;
+	padding: 10px 20px;
+	border-radius: 5px;
+	width: 100%;
+	color: #444;
+	margin-bottom: 20px;
+}
+a.highlight:hover {
+	text-decoration: none;
+	background-color: #fff;
+	/*background-image: linear-gradient(#fff, #eee);*/
+	box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+a.highlight:active {
+	background-color: #ddd;
+	background-image: linear-gradient(#f0c68f, #f8e4cb);
+}
+a.highlight > div {
+	display: table-cell;
+	vertical-align: middle;
+}
+a.highlight .icon {
+	font-size: 50px;
+	padding-top: 10px;
+	padding-right: 20px;
+}
+a.highlight .text {
+	width: 100%;
+}
+a.highlight h4 {
+	margin-bottom: 5px;
+}
+a.highlight .arrow {
+	font-size: 25px;
+	color: rgba(0,0,0,0.25);
+}
+
 @media screen and (max-width: 768px) {
 	#logo-text {
 		display: none;
