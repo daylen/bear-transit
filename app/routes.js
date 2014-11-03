@@ -1,5 +1,5 @@
 var _ = require('underscore');
-var moment = require('moment');
+var moment = require('moment-timezone');
 var request = require('request');
 
 var lines = require('../data/lines');
@@ -130,7 +130,7 @@ module.exports = function(app) {
 				var next_bus = [];
 
 				var m_date = moment(Number(req.query.time));
-				m_date.zone("-07:00");
+				m_date.tz('America/Los_Angeles');
 				var day_of_week = m_date.isoWeekday();
 
 				_.each(lines, function(line) {
