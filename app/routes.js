@@ -154,10 +154,19 @@ module.exports = function(app) {
 				stop.next = next_bus;
 
 				if (stop.next.length === 0) {
-					if (day_of_week === 6 || day_of_week === 7) {
-						stop.message = "Bear Transit day shuttles do not run on weekends.";
+					var ua = req.headers["user-agent"];
+					if (ua.indexOf("com.daylenyang.Bear-Transit") !== -1) {
+						// Request comes from Bear Transit iPhone app
+						var build = Number(ua.substring(ua.indexOf("(") + 1, ua.indexOf(";")));
+						if (build >= 3) {
+							stop.message = "Day shuttles are not running. Tap the Map tab to see the night shuttle map.";
+						} else {
+							stop.message = "Day shuttles are not running. Night shuttle map is coming soon!";
+						}
+
 					} else {
-						stop.message = "Night shuttle support is coming soon.";
+						// Request comes from web
+						stop.message = "Day shuttles are not running. For night shuttle status, consult the BearWalk website.";
 					}
 				}
 			}
