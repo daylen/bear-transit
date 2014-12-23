@@ -161,12 +161,12 @@ module.exports = function(app) {
 						if (build >= 3) {
 							stop.message = "Day shuttles are not running. Tap the Map tab to see the night shuttle map.";
 						} else {
-							stop.message = "Day shuttles are not running. Night shuttle map is coming soon!";
+							stop.message = "Day shuttles are not running. Update this app to see the new night shuttle map.";
 						}
 
 					} else {
 						// Request comes from web
-						stop.message = "Day shuttles are not running. For night shuttle status, consult the BearWalk website.";
+						stop.message = "Day shuttles are not running. For night shuttle status, download the Bear Transit app.";
 					}
 				}
 			}
