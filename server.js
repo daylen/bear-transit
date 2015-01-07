@@ -38,9 +38,10 @@ if (cluster.isMaster) {
 	app.set('view engine', 'jade');
 
 	app.use(express.static(path.join(__dirname, 'public')));
-	app.use(error_handler);
 
 	require('./app/routes')(app);
+
+	app.use(error_handler);
 
 	var server = app.listen(Number(process.env.PORT || 3000), function() {
 		console.log('Server started');
