@@ -69,11 +69,16 @@ module.exports = function(app) {
 	});
 
 	app.get('/api/v1/live', function(req, res, next) {
-		request.post({url: 'http://bearwalk.berkeley.edu/map/student'}, function(err, httpRes, body) {
+		request.get({url: 'http://bearwalk.berkeley.edu/bustracking/api/v1/positions'}, function(err, httpRes, body) {
 			if (err) next(err);
 			var data = JSON.parse(body);
-			data = _.filter(data, function(x) { return x.x && x.y; });
-			data = _.map(data, function(x) { return _.pick(x, 'van_id', 'x', 'y'); });
+			data = _.filter(data, function(x) { return x.vehicle; });
+			data = _.map(data, function(x) { return _.pick(x, 'id', 'latitude', 'longitude'); });
+			data = _.map(data, function(x) { return {
+				'van_id': x.id,
+				'x': x.latitude,
+				'y': x.longitude
+			};});
 			res.json(data);
 		});
 	});
