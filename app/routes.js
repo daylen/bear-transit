@@ -54,11 +54,10 @@ function calc_upcoming_times (m_date, inc, segment) {
 					curr = increment_time(curr, inc[counter]);
 					counter++
 				}
-				
+
 			} while (curr <= interval[1]);
 		});
 	}
-	console.log(all_times);
 	var curr_time_formatted = m_date.hour() * 100 + m_date.minute();
 
 	var future_times = _.filter(all_times, function(time) {
@@ -69,7 +68,7 @@ function calc_upcoming_times (m_date, inc, segment) {
 }
 
 module.exports = function(app) {
-	
+
 	app.get('/', function(req, res) {
 		res.render('index');
 	});
