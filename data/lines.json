@@ -608,7 +608,7 @@
       },
       {
         "from": "kroeber",
-        "to": "hearst",
+        "to": "hearst gym",
         "intervals": [
           [
             2002,
@@ -617,7 +617,7 @@
         ]
       },
       {
-        "from": "hearst",
+        "from": "hearst gym",
         "to": "asuc",
         "intervals": [
           [
@@ -857,7 +857,7 @@
       },
       {
         "from": "kroeber",
-        "to": "hearst",
+        "to": "hearst gym",
         "intervals": [
           [
             1902,
@@ -866,7 +866,7 @@
         ]
       },
       {
-        "from": "hearst",
+        "from": "hearst gym",
         "to": "asuc",
         "intervals": [
           [
@@ -1109,7 +1109,7 @@
       },
       {
         "from": "unit2",
-        "to": "warring",
+        "to": "warring_p",
         "intervals": [
           [
             1944,
@@ -1118,7 +1118,7 @@
         ]
       },
       {
-        "from": "warring",
+        "from": "warring_p",
         "to": "clark kerr",
         "intervals": [
           [
@@ -1129,7 +1129,7 @@
       },
       {
         "from": "clark kerr",
-        "to": "warring @ channing",
+        "to": "warring_c",
         "intervals": [
           [
             1946,
@@ -1138,8 +1138,8 @@
         ]
       },
       {
-        "from": "warring @ channing",
-        "to": "warring @ bancroft",
+        "from": "warring_c",
+        "to": "warring_b",
         "intervals": [
           [
             1947,
@@ -1148,7 +1148,7 @@
         ]
       },
       {
-        "from": "warring @ bancroft",
+        "from": "warring_b",
         "to": "ihouse",
         "intervals": [
           [
@@ -1581,7 +1581,7 @@
       },
       {
         "from": "unit2",
-        "to": "warring",
+        "to": "warring_p",
         "intervals": [
           [
             1844,
@@ -1590,7 +1590,7 @@
         ]
       },
       {
-        "from": "warring",
+        "from": "warring_p",
         "to": "clark kerr",
         "intervals": [
           [
@@ -1601,7 +1601,7 @@
       },
       {
         "from": "clark kerr",
-        "to": "warring @ channing",
+        "to": "warring_c",
         "intervals": [
           [
             1846,
@@ -1610,8 +1610,8 @@
         ]
       },
       {
-        "from": "warring @ channing",
-        "to": "warring @ bancroft",
+        "from": "warring_c",
+        "to": "warring_b",
         "intervals": [
           [
             1847,
@@ -1620,7 +1620,7 @@
         ]
       },
       {
-        "from": "warring @ bancroft",
+        "from": "warring_b",
         "to": "ihouse",
         "intervals": [
           [
