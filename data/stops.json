@@ -94,7 +94,7 @@
     "lat": 37.872406,
     "lon": -122.246452
   },
-  "shattuck": {
+  "shattuck_k": {
     "name": "Kittredge",
     "lat": 37.868275,
     "lon": -122.267662
@@ -118,5 +118,110 @@
     "name": "West Circle",
     "lat": 37.872341,
     "lon": -122.263535
+  },
+  "life science": {
+    "name": "Life Science Addition",
+    "lat": 37.8714868,
+    "lon": -122.263371
+  },
+  "west crescent": {
+    "name": "Life Science Addition",
+    "lat": 37.8712079,
+    "lon": -122.2654999
+  },
+  "shattuck_a": {
+    "name": "Shattuck Ave @ Allston",
+    "lat": 37.869421,
+    "lon": -122.268109
+  },
+  "manville": {
+    "name": "Manville Hall",
+    "lat": 37.865839,
+    "lon": -122.266877
+  },
+  "dwight": {
+    "name": "Dwight Way @ Fulton",
+    "lat": 37.864231,
+    "lon": -122.264972
+  },
+  "ellsworth": {
+    "name": "Ellsworth Structure",
+    "lat": 37.866378,
+    "lon": -122.262747
+  },
+  "unit3": {
+    "name": "Res Hall Unit 3",
+    "lat": 37.866787,
+    "lon": -122.259373
+  },
+  "unit1": {
+    "name": "Res Hall Unit 1",
+    "lat": 37.867384,
+    "lon": -122.254728
+  },
+  "unit2": {
+    "name": "Res Hall Unit 2",
+    "lat": 37.866670,
+    "lon": -122.254199
+  },
+  "unit2": {
+    "name": "Res Hall Unit 2",
+    "lat": 37.866670,
+    "lon": -122.254199
+  },
+  "warring_p": {
+    "name": "Warring Street @ Piedmont",
+    "lat": 37.865621,
+    "lon": -122.250702
+  },
+  "clark kerr": {
+    "name": "Clark Kerr Campus",
+    "lat": 37.864249,
+    "lon": -122.249393
+  },
+  "warring_c": {
+    "name": "Warring Street @ Channing",
+    "lat": 37.867794,
+    "lon": -122.250748
+  },
+  "warring_b": {
+    "name": "Warring Street @ Bancroft",
+    "lat": 37.869312,
+    "lon": -122.250915
+  },
+  "haas_night": {
+    "name": "Haas",
+    "lat": 37.871610,
+    "lon": -122.252519
+  },
+  "greek": {
+    "name": "Greek Thatre @ Gayley",
+    "lat": 37.872532,
+    "lon": -122.253621
+  },
+  "foothill": {
+    "name": "Foothill Residence Hall",
+    "lat": 37.875617,
+    "long": -122.255807
+  },
+  "uni ave": {
+    "name": "University Ave @ Shattuck",
+    "lat": 37.872304,
+    "long": -122.268323
+  },
+  "highland": {
+    "name": "Highland @ Ridge",
+    "lat": 37.876548,
+    "long": -122.255913
+  },
+  "east gate": {
+    "name": "East Gate on Gayley",
+    "lat": 37.874113,
+    "long": -122.255632
+  },
+  "asuc": {
+    "name": "ASUC: Bancroft & Telegraph",
+    "lat": 37.868821,
+    "long": -122.258938
   }
 }
