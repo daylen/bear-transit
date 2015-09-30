@@ -455,7 +455,7 @@
     ]
   },
   "North Side Night S-F": {
-    "name": "North Side Night Shuttle: Sunday - Friday",
+    "name": "North Side Night",
     "days": [
       1,
       2,
@@ -709,7 +709,7 @@
     ]
   },
   "North Side Night Sat": {
-    "name": "North Side Night Shuttle: Saturday",
+    "name": "North Side Night",
     "days": [
       6
     ],
@@ -958,7 +958,7 @@
     ]
   },
   "South Side Night Week": {
-    "name": "South Side Night Shuttle: Weekdays",
+    "name": "South Side Night",
     "days": [
       1,
       2,
@@ -1210,7 +1210,7 @@
     ]
   },
   "South Side Night Saturday": {
-    "name": "South Side Night Shuttle: Saturday",
+    "name": "South Side Night",
     "days": [
       6
     ],
@@ -1463,7 +1463,7 @@
     ]
   },
   "South Side Night Sunday": {
-    "name": "South Side Night Shuttle: Sunday",
+    "name": "South Side Night",
     "days": [
       7
     ],
