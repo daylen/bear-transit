@@ -42,13 +42,23 @@ function calc_upcoming_times (m_date, inc, segment) {
 	if (segment.intervals) {
 		_.each(segment.intervals, function(interval) {
 			var curr = interval[0];
+			var counter = 0;
+			if (interval[1] < interval[0]) {
+				interval[1] += 2400
+			}
 			do {
 				all_times.push(curr);
-				curr = increment_time(curr, inc);
+				if(Number.isInteger(inc)) {
+					curr = increment_time(curr, inc);
+				} else {
+					curr = increment_time(curr, inc[counter]);
+					counter++
+				}
+				
 			} while (curr <= interval[1]);
 		});
 	}
-
+	console.log(all_times);
 	var curr_time_formatted = m_date.hour() * 100 + m_date.minute();
 
 	var future_times = _.filter(all_times, function(time) {

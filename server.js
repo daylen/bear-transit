@@ -22,7 +22,7 @@ function error_handler(err, req, res, next) {
 		else
 			res.status(404).send('404 Not found');
 	} else {
-		console.err(err.stack);
+		console.log(err.stack);
 		if (req.xhr)
 			res.status(500).json({ error: 'Internal server error' });
 		else
