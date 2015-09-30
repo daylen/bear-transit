@@ -195,33 +195,33 @@
     "lon": -122.252519
   },
   "greek": {
-    "name": "Greek Thatre @ Gayley",
+    "name": "Greek Theatre @ Gayley",
     "lat": 37.872532,
     "lon": -122.253621
   },
   "foothill": {
     "name": "Foothill Residence Hall",
     "lat": 37.875617,
-    "long": -122.255807
+    "lon": -122.255807
   },
   "uni ave": {
     "name": "University Ave @ Shattuck",
     "lat": 37.872304,
-    "long": -122.268323
+    "lon": -122.268323
   },
   "highland": {
     "name": "Highland @ Ridge",
     "lat": 37.876548,
-    "long": -122.255913
+    "lon": -122.255913
   },
   "east gate": {
     "name": "East Gate on Gayley",
     "lat": 37.874113,
-    "long": -122.255632
+    "lon": -122.255632
   },
   "asuc": {
     "name": "ASUC: Bancroft & Telegraph",
     "lat": 37.868821,
-    "long": -122.258938
+    "lon": -122.258938
   }
 }
