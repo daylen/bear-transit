@@ -78,7 +78,7 @@ module.exports = function(app) {
 	});
 
 	app.get('/api/v1/live', function(req, res, next) {
-		request.get({url: 'http://bearwalk-old.berkeley.edu/bustracking/api/v1/positions'}, function(err, httpRes, body) {
+		request.get({url: 'http://bearwalk-old.ridecell.com/bustracking/api/v1/positions'}, function(err, httpRes, body) {
 			if (err) next(err);
 			var data = JSON.parse(body);
 			data = _.filter(data, function(x) { return x.vehicle; });
